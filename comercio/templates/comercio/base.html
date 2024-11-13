@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Comercio{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'comercio/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Registro de produtos</h1>
+        </div>
+
+        <div class="blockcontent">
+            {% block content %}{% endblock %}
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="{% url 'faculdade:aluno-list' %}" >Alunos</a> | 
+            <a href="{% url 'faculdade:curso-list' %}" >Cursos</a>
+        </p>
+    </div>
+
+</body>
+</html>

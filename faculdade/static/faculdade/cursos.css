@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(209, 222, 250);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.aluno-curso-box {
+    border-style: solid;
+    border-color: rgb(16, 7, 104);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 8px;
+    width: 280px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.aluno-curso-titulo {
+    font-size: 1.8em;
+    color: rgb(16, 7, 104);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.aluno-curso-descricao {
+    font-size: 1em;
+    color: rgb(75, 27, 27);
+}
+
+.aluno-cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 20px;
+}
+
+.footer{
+    font-size: 1.3em;
+    text-align: center;
+}
+

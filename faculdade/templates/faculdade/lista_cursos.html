@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'faculdade/cursos.css' %}">
+</head>
+<body>
+
+    <h1>Lista de Cursos</h1>
+    
+    <div class="aluno-cursos-container">
+        {% for curso in cursos %}
+        <div class="aluno-curso-box">
+            <h2 class="aluno-curso-titulo">{{ curso.titulo }}</h2>
+            <p class="aluno-curso-descricao">{{ curso.descricao }}</p>
+            <p class="aluno-curso-descricao"> Quantidade de alunos: {{ curso.alunos.count }}. </p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="{% url 'comercio:produto_novo' %}" >Registrar produtos</a> | 
+            <a href="{% url 'faculdade:aluno-list' %}" >Alunos</a>
+        </p>
+    </div>
+
+</body>
+</html>

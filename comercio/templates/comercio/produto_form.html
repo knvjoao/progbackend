@@ -1,0 +1,43 @@
+{% extends 'comercio/base.html' %}
+
+{% block content %}
+    <div class="header2">
+        <h2>Cadastrar Produto</h2>
+    </div>
+
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <div style="text-align: center; color: green; font-size: 2em;">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+
+    {% endif %}
+
+    <form method="POST" class="produtos-container">
+        {% csrf_token %}
+        <div class="campo">
+            <label for="nome">Nome:</label>
+            {{ form.nome }}
+        </div>
+        
+        <div class="campo">
+            <label for="descricao">Descrição:</label>
+            {{ form.descricao }}
+        </div>
+        
+        <div class="campo">
+            <label for="preco">Preço:</label>
+            {{ form.preco }}
+        </div>
+        
+        <div class="campo">
+            <label for="validade">Validade:</label>
+            {{ form.validade }}
+        </div>
+
+        <button type="submit" class="salvar">Salvar</button>
+    </form>
+{% endblock %}

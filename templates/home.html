@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'comercio/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Programação back-end</h1>
+        <p>Paths:</p>
+        <ul>
+            <li><a href="{% url 'faculdade:aluno-list' %}">Alunos</a></li>
+            <li><a href="{% url 'faculdade:curso-list' %}">Cursos</a></li>
+            <li><a href="{% url 'comercio:produto_novo' %}">Cadastrar Novo Produto</a></li>
+        </ul>
+    </div>
+</body>
+</html>

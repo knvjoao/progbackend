@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alunos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'faculdade/alunos.css' %}">
+</head>
+<body>
+
+    <h1>Lista de Alunos</h1>
+
+    <div class="alunos-container">
+        {% for aluno in alunos %}
+            <div class="aluno-box">
+                <h2>{{ aluno.nome }} {{ aluno.sobrenome }}</h2>
+                <p><strong>Email:</strong> {{ aluno.email }}</p>
+                <p><strong>Cursos Matriculados:</strong></p>
+                <ul class="cursos-lista">
+                    {% for curso in aluno.cursos.all %}
+                        <li>{{ curso.titulo }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="{% url 'comercio:produto_novo' %}" >Registrar produtos</a> | 
+            <a href="{% url 'faculdade:curso-list' %}" >Cursos</a>
+        </p>
+    </div>
+
+</body>
+</html>
